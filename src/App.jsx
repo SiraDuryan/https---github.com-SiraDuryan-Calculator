@@ -26,12 +26,7 @@ export default function App() {
     }
   }
 
-  const clear = () => {
-    setResult ("");
-    setValueA ("");
-    setValueB ("");
-
-  }
+ 
 
   return (
     <>
