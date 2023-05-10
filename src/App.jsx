@@ -6,9 +6,8 @@ export default function App() {
   const [valueA, setValueA] = useState("");
   const [valueB, setValueB] = useState("");
   const [result, setResult] = useState("");
-  const [action, setAction] = useState(0);
 
-  const submit =() => {
+  const submit =(action) => {
     if (action==="+") {
       setResult (parseInt(valueA) + parseInt(valueB))
     }
@@ -38,10 +37,10 @@ export default function App() {
       <button onClick={submit}>=</button>
     </div>
     <div className='block2'>
-      <button onClick={()=>setAction("+")}>+</button>
-      <button onClick={()=>setAction("-")}>-</button>
-      <button onClick={()=>setAction("*")}>*</button>
-      <button onClick={()=>setAction("/")}>/</button>
+      <button onClick={()=>submit("+")}>+</button>
+      <button onClick={()=>submit("-")}>-</button>
+      <button onClick={()=>submit("*")}>*</button>
+      <button onClick={()=>submit("/")}>/</button>
     
     </div>
     <div className='result'>Result: {result}</div>
